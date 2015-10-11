@@ -7,3 +7,8 @@ q[,1] <- qdate
 q1 <- q[q$Date=="2007-02-01",]
 q2 <- q[q$Date=="2007-02-02",]
 qnew <- rbind(q1,q2)
+#loaded dataset of the required dates in 'qnew'
+hist(qnew$Global_active_power, col="red",main = "Global Active Power",xlab = "Global Active Power (Kilowatts)")
+plot(qnew$Date,qnew$Sub_metering_1)
+lines(qnew$Sub_metering_2,col="blue")
+lines(qnew$Sub_metering_3,col="red")
